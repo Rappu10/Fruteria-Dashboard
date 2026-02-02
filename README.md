@@ -1,49 +1,68 @@
+🍎 Frutería Inventory Dashboard
 
-🍎 Frutería Dashboard
+Dashboard web para la gestión integral de inventario de una frutería, desarrollado como aplicación administrativa moderna.
+Permite controlar productos, registrar movimientos de inventario, monitorear stock y caducidad, y visualizar métricas clave en tiempo real.
 
-Aplicación web para la gestión de inventario de una frutería, desarrollada como dashboard administrativo.
-El sistema permite controlar productos, registrar entradas y salidas, monitorear stock y caducidad, y visualizar información clave mediante indicadores claros y accesibles.
-
-El proyecto prioriza usabilidad, accesibilidad y claridad visual, siguiendo buenas prácticas de diseño de interfaces y arquitectura frontend.
+El proyecto pone énfasis en arquitectura clara, experiencia de usuario, accesibilidad y consistencia visual, utilizando tecnologías frontend actuales.
 
 ⸻
 
-📌 Alcance del proyecto
+✨ Características destacadas
+	•	📊 Dashboard ejecutivo con métricas clave
+	•	📦 CRUD de productos con validaciones y confirmaciones
+	•	➕ Entradas que incrementan stock automáticamente
+	•	➖ Salidas con validación para evitar stock negativo
+	•	⏰ Control de caducidad con indicadores visuales
+	•	🎨 Interfaz moderna (tema oscuro, alto contraste)
+	•	♿ Accesible y usable (labels, feedback, navegación por teclado)
 
-Este dashboard está diseñado para un entorno de gestión básica, donde el usuario necesita:
-	•	Conocer el estado general del inventario de forma inmediata
-	•	Registrar movimientos de productos sin riesgo de error
-	•	Identificar productos con bajo stock o cercanos a caducar
-	•	Evitar inconsistencias como stock negativo
-	•	Navegar el sistema de manera simple e intuitiva
+⸻
+
+🧭 Alcance y objetivos
+
+Este proyecto está orientado a escenarios donde se requiere:
+	•	Visibilidad inmediata del estado del inventario
+	•	Registro seguro de movimientos de productos
+	•	Prevención de errores comunes (stock negativo, eliminaciones accidentales)
+	•	Identificación rápida de productos críticos
+	•	Interacción clara sin curva de aprendizaje
+
+No está diseñado como sistema productivo, sino como base sólida y extensible para aplicaciones reales de inventario.
 
 ⸻
 
 ⚙️ Stack tecnológico
-	•	Frontend
+
+Frontend
 	•	React
 	•	Vite
 	•	TypeScript
 	•	Ant Design v5
-	•	Backend (simulado)
+
+Backend (simulado)
 	•	JSON Server
-	•	Estilos
+
+UI / UX
 	•	Tema oscuro con alto contraste
+	•	Colores semánticos (éxito, advertencia, error)
 	•	Componentes accesibles de Ant Design
 
 ⸻
 
-🗂️ Arquitectura del proyecto
+🗂️ Estructura del proyecto
 
 fruteria-dashboard/
 ├── src/
-│   ├── api/            # Configuración de cliente HTTP
-│   ├── pages/          # Vistas principales (Dashboard, Productos, etc.)
+│   ├── api/            # Cliente HTTP (axios)
+│   ├── pages/          # Vistas principales
+│   │   ├── Dashboard
+│   │   ├── Products
+│   │   ├── Entries
+│   │   ├── Exits
+│   │   └── Expiration
 │   ├── types/          # Tipos TypeScript
-│   ├── assets/         # Recursos visuales
-│   ├── App.tsx         # Layout y navegación principal
-│   ├── main.tsx        # Punto de entrada
-│   └── index.css       # Estilos globales
+│   ├── App.tsx         # Layout y navegación
+│   └── main.tsx        # Punto de entrada
 ├── db.json             # Base de datos simulada
 ├── package.json
 ├── vite.config.ts
@@ -55,117 +74,126 @@ fruteria-dashboard/
 🧩 Funcionalidades
 
 Dashboard
-	•	Visualización del stock total
-	•	Indicadores de productos por caducar y caducados
-	•	Listado de entradas y salidas recientes
-	•	Información actualizada automáticamente desde el inventario
+	•	Stock total
+	•	Productos por caducar
+	•	Productos caducados
+	•	Entradas y salidas recientes
+	•	Tarjetas visuales con iconografía
 
-Gestión de productos
-	•	Alta, edición y eliminación de productos
-	•	Validaciones en formularios
-	•	Confirmación antes de eliminar registros
+Productos
+	•	Alta, edición y eliminación
+	•	Validaciones de formulario
+	•	Búsqueda por nombre
+	•	Indicadores visuales de stock bajo
+	•	Confirmación antes de eliminar
 
 Entradas
-	•	Registro de entradas de productos
-	•	Incremento automático del stock
-	•	Mensajes de confirmación
+	•	Registro de ingresos de productos
+	•	Actualización automática del stock
+	•	Historial de entradas
 
 Salidas
-	•	Registro de salidas
-	•	Validación para evitar stock negativo
-	•	Mensajes de advertencia en acciones inválidas
+	•	Registro de egresos de productos
+	•	Validación de stock disponible
+	•	Bloqueo de inventario negativo
 
 Caducidad
-	•	Clasificación de productos:
-	•	Vigentes
+	•	Clasificación automática:
+	•	Vigente
 	•	Por caducar
-	•	Caducados
+	•	Caducado
 	•	Indicadores visuales por color
 
 ⸻
 
 ♿ Accesibilidad
-
-El sistema cumple con principios básicos de accesibilidad:
-	•	Labels visibles y asociados a cada campo
-	•	Mensajes claros de error, éxito y advertencia
-	•	Buen contraste entre texto y fondo
+	•	Labels visibles en todos los formularios
+	•	Mensajes claros de éxito, error y advertencia
+	•	Buen contraste visual
 	•	Navegación funcional mediante teclado
-	•	Uso de componentes accesibles de Ant Design
+	•	Estados vacíos y de carga informativos
 
 ⸻
 
 👤 Usabilidad
-	•	Menú lateral claro y persistente
-	•	Flujo de navegación sencillo y predecible
-	•	Información priorizada mediante tarjetas y colores semánticos
-	•	Reducción de carga cognitiva en acciones frecuentes
+	•	Menú lateral persistente y claro
+	•	Flujo de navegación sencillo
+	•	Jerarquía visual consistente
+	•	Reducción de carga cognitiva mediante señales visuales
 
 ⸻
 
 🧪 Validaciones y control de errores
 	•	No se permite stock negativo
-	•	Formularios con validación previa al envío
-	•	Confirmación en acciones destructivas
-	•	Mensajes comprensibles para el usuario final
+	•	Formularios validados antes de enviar
+	•	Confirmaciones en acciones destructivas
+	•	Feedback inmediato al usuario
 
 ⸻
 
-📦 Requisitos del sistema
-	•	Node.js v18 o superior
-	•	npm v9 o superior
+📦 Requisitos
+	•	Node.js ≥ 18
+	•	npm ≥ 9
 
 ⸻
 
 🚀 Instalación
-	1.	Clonar el repositorio:
+
+Clonar el repositorio:
 
 git clone <URL_DEL_REPOSITORIO>
 
-	2.	Acceder al directorio del proyecto:
+Entrar al proyecto:
 
 cd fruteria-dashboard
 
-	3.	Instalar dependencias:
+Instalar dependencias:
 
 npm install
 
 
 ⸻
 
-▶️ Ejecución del proyecto
+▶️ Ejecución
 
-Iniciar el backend (JSON Server)
+Backend (JSON Server)
 
 npm run server
 
-Esto levantará el servidor en:
+Servidor disponible en:
 
 http://localhost:3001
 
 
 ⸻
 
-Iniciar el frontend (Vite)
+Frontend (Vite)
 
 npm run dev
 
-La aplicación estará disponible en:
+Aplicación disponible en:
 
 http://localhost:5173
 
 
 ⸻
 
-📝 Notas adicionales
-	•	El backend está simulado mediante JSON Server y no requiere configuración adicional
-	•	El proyecto está orientado a prácticas de diseño de experiencia de usuario y no a un entorno productivo
-	•	La estructura permite escalar fácilmente a un backend real
+📝 Notas técnicas
+	•	El backend está simulado mediante JSON Server
+	•	No requiere variables de entorno
+	•	La arquitectura permite migrar fácilmente a un backend real
+	•	El proyecto prioriza claridad y mantenibilidad
 
 ⸻
 
 📄 Licencia
 
-Proyecto desarrollado con fines académicos.
+Proyecto desarrollado con fines académicos y demostrativos.
+
+⸻
+
+🧠 Comentario final (opcional, pero elegante)
+
+Este proyecto demuestra la implementación de un dashboard administrativo aplicando buenas prácticas de frontend moderno, con énfasis en experiencia de usuario y accesibilidad.
 
 ⸻
