@@ -49,24 +49,23 @@ UI / UX
 
 ⸻
 
-🗂️ Estructura del proyecto
+## 🗂️ Estructura del proyecto
 
+El proyecto está organizado por responsabilidades para facilitar
+la mantenibilidad y escalabilidad.
+
+```txt
 fruteria-dashboard/
 ├── src/
-│   ├── api/            # Cliente HTTP (axios)
-│   ├── pages/          # Vistas principales
-│   │   ├── Dashboard
-│   │   ├── Products
-│   │   ├── Entries
-│   │   ├── Exits
-│   │   └── Expiration
-│   ├── types/          # Tipos TypeScript
-│   ├── App.tsx         # Layout y navegación
-│   └── main.tsx        # Punto de entrada
-├── db.json             # Base de datos simulada
-├── package.json
-├── vite.config.ts
-└── README.md
+│   ├── api/          # Cliente HTTP y configuración de axios
+│   ├── pages/        # Vistas principales de la aplicación
+│   ├── types/        # Tipos e interfaces TypeScript
+│   ├── App.tsx       # Layout principal y navegación
+│   └── main.tsx      # Punto de entrada de la aplicación
+├── db.json           # Base de datos simulada (JSON Server)
+├── package.json      # Dependencias y scripts
+├── vite.config.ts    # Configuración de Vite
+└── README.md         # Documentación del proyecto
 
 
 ⸻
@@ -141,13 +140,13 @@ Caducidad
 
 Clonar el repositorio:
 
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/Rappu10/Fruteria-Dashboard.git
 
 Entrar al proyecto:
 
 cd fruteria-dashboard
 
-Instalar dependencias:
+Instalar dependencias:djays, axios y antd 
 
 npm install
 
