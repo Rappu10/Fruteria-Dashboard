@@ -191,7 +191,7 @@ Proyecto desarrollado con fines académicos y demostrativos.
 
 ⸻
 
-🧠 Comentario final (opcional, pero elegante)
+🧠 Comentario final
 
 Este proyecto demuestra la implementación de un dashboard administrativo aplicando buenas prácticas de frontend moderno, con énfasis en experiencia de usuario y accesibilidad.
 
