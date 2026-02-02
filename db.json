@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "Plátano",
+      "price": 18,
+      "stock": 20,
+      "expirationDate": "2026-02-04"
+    },
+    {
+      "name": "Cebolla",
+      "price": 20,
+      "stock": 6,
+      "expirationDate": "2026-02-01",
+      "id": 4
+    },
+    {
+      "name": "Pepino",
+      "price": 40,
+      "stock": 10,
+      "expirationDate": "2026-03-02",
+      "id": 5
+    },
+    {
+      "name": "Tomate",
+      "price": 15,
+      "stock": 10,
+      "expirationDate": "2026-03-03",
+      "id": 6
+    }
+  ],
+  "entries": [
+    {
+      "productId": 2,
+      "quantity": 10,
+      "date": "2026-02-02",
+      "id": 1
+    },
+    {
+      "productId": 2,
+      "quantity": 7,
+      "date": "2026-02-02",
+      "id": 2
+    }
+  ],
+  "exits": [
+    {
+      "productId": 2,
+      "quantity": 10,
+      "date": "2026-02-02",
+      "id": 1
+    },
+    {
+      "productId": 5,
+      "quantity": 10,
+      "date": "2026-02-02",
+      "id": 2
+    }
+  ]
+}
